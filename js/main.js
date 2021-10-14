@@ -23,7 +23,7 @@ const text = [
 ];
 
 const imageContainer = document.querySelector(".image_container");
-const miniImgContainer = document.querySelector("mini_img_container");
+const miniImgContainer = document.querySelector(".col-2");
 
 let currentIndex = 0;
 /* Ciclo for che scorre l'array */
@@ -61,7 +61,9 @@ const arrowDown = document.querySelector(".arrow_down");
 /* Per ogni freccia aggiungiamo un addEventListener sul click */
 arrowUp.addEventListener("click", function () {
     const activeImage = imageContainer.querySelector(".active");
+    const activeMiniImg = miniImgContainer.querySelector(".active")
     activeImage.classList.remove("active");
+    activeMiniImg.classList.remove("active");
 
     currentIndex--;
 
@@ -72,6 +74,10 @@ arrowUp.addEventListener("click", function () {
     const imgTags = imageContainer.querySelectorAll("img");
     const newActiveImage = imgTags[currentIndex];
     newActiveImage.classList.add("active");
+
+    const miniImgTags = miniImgContainer.querySelectorAll("img");
+    const newActiveMiniImg = miniImgTags[currentIndex];
+    newActiveMiniImg.classList.add("active");
 
     const imgTitle = imageContainer.querySelector(".img_title");
     const imgText = imageContainer.querySelector(".img_text");
@@ -99,8 +105,10 @@ arrowUp.addEventListener("click", function () {
 });
 
 arrowDown.addEventListener("click", function () {
-    const activeImage = document.querySelector(".active");
+    const activeImage = imageContainer.querySelector(".active");
+    const activeMiniImg = miniImgContainer.querySelector(".active")
     activeImage.classList.remove("active");
+    activeMiniImg.classList.remove("active");
 
     currentIndex++;
 
@@ -111,6 +119,10 @@ arrowDown.addEventListener("click", function () {
     const imgTags = imageContainer.querySelectorAll("img");
     const newActiveImage = imgTags[currentIndex];
     newActiveImage.classList.add("active");
+
+    const miniImgTags = miniImgContainer.querySelectorAll("img");
+    const newActiveMiniImg = miniImgTags[currentIndex];
+    newActiveMiniImg.classList.add("active");
 
     const imgTitle = imageContainer.querySelector(".img_title");
     const imgText = imageContainer.querySelector(".img_text");
