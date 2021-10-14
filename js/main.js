@@ -46,7 +46,7 @@ for (let i = 0; i < items.length; i++) {
         imgTitle.textContent = title[currentIndex];
 
         const imgText = document.createElement("p");
-        imgText.classList.add("img-text");
+        imgText.classList.add("img_text");
         imgText.textContent = text[currentIndex];
 
         imageContainer.append(imgOverlay);
@@ -73,9 +73,15 @@ arrowUp.addEventListener("click", function () {
     const newActiveImage = imgTags[currentIndex];
     newActiveImage.classList.add("active");
 
-    const oldImgOverlay = document.querySelector("img_overlay");
+    const imgTitle = imageContainer.querySelector(".img_title");
+    const imgText = imageContainer.querySelector(".img_text");
+    imgTitle.textContent = title[currentIndex];
+    imgText.textContent = text[currentIndex];
 
-    oldImgOverlay.remove();
+
+    /* const oldImgOverlay = document.querySelector(".img_overlay");
+
+    oldImgOverlay.parentElement.removeChild(oldImgOverlay);
 
     const imgOverlay = document.createElement("div");
     imgOverlay.classList.add("img_overlay");
@@ -85,11 +91,11 @@ arrowUp.addEventListener("click", function () {
     imgTitle.textContent = title[currentIndex];
 
     const imgText = document.createElement("p");
-    imgText.classList.add("img-text");
+    imgText.classList.add("img_text");
     imgText.textContent = text[currentIndex];
 
     imageContainer.append(imgOverlay);
-    imgOverlay.append(imgTitle, imgText);
+    imgOverlay.append(imgTitle, imgText); */
 });
 
 arrowDown.addEventListener("click", function () {
@@ -106,21 +112,8 @@ arrowDown.addEventListener("click", function () {
     const newActiveImage = imgTags[currentIndex];
     newActiveImage.classList.add("active");
 
-    /* const oldImgOverlay = document.querySelector("img_overlay");
-
-    oldImgOverlay.remove(); */
-
-    const imgOverlay = document.createElement("div");
-    imgOverlay.classList.add("img_overlay");
-
-    const imgTitle = document.createElement("h5");
-    imgTitle.classList.add("img_title", "fw-bold", "mb-1");
+    const imgTitle = imageContainer.querySelector(".img_title");
+    const imgText = imageContainer.querySelector(".img_text");
     imgTitle.textContent = title[currentIndex];
-
-    const imgText = document.createElement("p");
-    imgText.classList.add("img-text");
     imgText.textContent = text[currentIndex];
-
-    imageContainer.append(imgOverlay);
-    imgOverlay.append(imgTitle, imgText);
 });

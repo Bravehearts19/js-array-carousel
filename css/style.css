@@ -34,11 +34,17 @@
 
 .img_overlay {
     position: absolute;
-    top: 80%;
-    left: 75%;
+    top: 60%;
+    width: 25%;
+    left: 74%;
     overflow: hidden;
     color: white;
     text-align: right;
+    z-index: 2;
+}
+
+.img_text {
+    font-size: 12px;
 }
 
 .mini_img_container {
