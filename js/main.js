@@ -61,7 +61,7 @@ const arrowDown = document.querySelector(".arrow_down");
 /* Per ogni freccia aggiungiamo un addEventListener sul click */
 arrowUp.addEventListener("click", function () {
     const activeImage = imageContainer.querySelector(".active");
-    const activeMiniImg = miniImgContainer.querySelector(".active")
+    const activeMiniImg = miniImgContainer.querySelector(".active");
     activeImage.classList.remove("active");
     activeMiniImg.classList.remove("active");
 
@@ -106,7 +106,7 @@ arrowUp.addEventListener("click", function () {
 
 arrowDown.addEventListener("click", function () {
     const activeImage = imageContainer.querySelector(".active");
-    const activeMiniImg = miniImgContainer.querySelector(".active")
+    const activeMiniImg = miniImgContainer.querySelector(".active");
     activeImage.classList.remove("active");
     activeMiniImg.classList.remove("active");
 
