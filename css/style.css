@@ -1,0 +1,90 @@
+.my_container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel_container {
+    width: 70%;
+    height: 70vh;
+    background-color: aquamarine;
+}
+
+.image_container {
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+}
+
+.image_container img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.image_container img.active {
+    opacity: 1;
+}
+
+.img_overlay {
+    position: absolute;
+    top: 80%;
+    left: 75%;
+    overflow: hidden;
+    color: white;
+    text-align: right;
+}
+
+.mini_img_container {
+    height: 20%;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.mini_img_container img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.35;
+    transition: opacity 0.3s;
+}
+
+.mini_img_container img.active {
+    opacity: 1;
+    border: 2px solid white;
+}
+
+.arrow_container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 99;
+}
+
+.arrow_up {
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 24px;
+}
+
+.arrow_down {
+    position: absolute;
+    top: 95%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 24px;
+}
